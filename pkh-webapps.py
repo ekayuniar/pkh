@@ -14,54 +14,6 @@ img = Image.open('gov_sas.jpg')
 img = img.resize((700, 418))
 st.image(img, use_column_width=False)
 
-st.sidebar.header('Keterangan Inputan Data')
-st.sidebar.write("""1. Usia \n
-    Lansia (46->65 tahun)  = 4 \n
-    Anak-anak (5-11 tahun) = 3 \n
-    Remaja (12-25 tahun)   = 2 \n
-    Dewasa (26-45 tahun)   = 1 \n\n
-    
-2. Jumlah Tanggungan\n
-    <2  = 3 \n
-    <= 2 = 2 \n
-    > 2  = 1  \n\n
-    
-3. Pekerjaan \n
-    Pelajar/Mahasiswa     = 7 \n
-    Mengurus Rumah Tangga = 6 \n
-    Buruh Lepas           = 5 \n
-    Buruh Tani            = 4 \n
-    Petani/Pekebun        = 3 \n
-    Karyawan/Wiraswasta   = 2 \n
-    Wirausaha             = 1 \n
-    PNS/TNI/Polri         = 0 \n\n
-    
-4. Penghasilan \n
-    Tidak Berpenghasilan  = 4 \n
-    < 1.000.000           = 3 \n
-    1.000.000 – 2.000.000 = 2 \n
-    > 2.000.000           = 1 \n\n
-    
-5. Tempat Tinggal \n
-    Kontrak       = 3 \n
-    Bebas Sewa    = 2 \n
-    Milik Sendiri = 1 \n\n
-    
-6. Jenis Lantai  \n
-    Tanah   = 3 \n
-    Semen   = 2 \n
-    Keramik = 1 \n\n
-    
-7. Jenis Dinding \n
-    Anyaman Bambu = 3 \n
-    Kayu          = 2 \n
-    Semen         = 1 \n\n
-    
-8. Bantuan Lain \n
-    Tidak = 2 \n
-    Ya = 1
-""")
-
 modelnb = pickle.load(open('./Model/modelNBC_PKHv2.pkl', 'rb'))
 
 
