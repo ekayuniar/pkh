@@ -68,17 +68,17 @@ def run():
     prediksi = modelnb.predict(fitur)
     pred_prob = modelnb.predict_proba(fitur)
 
-    st.subheader('Keterangan Label Kelas')
-    keterangan = np.array(['LAYAK', 'TIDAK LAYAK'])
-    st.write(keterangan)
+   # st.subheader('Keterangan Label Kelas')
+   # keterangan = np.array(['LAYAK', 'TIDAK LAYAK'])
+   # st.write(keterangan)
 
     st.subheader('Hasil Prediksi (Klasifikasi Penerima Bantuan PKH)')
     keterangan = np.array(0)
     st.write(prediksi[keterangan])
 
-    st.subheader(
-        'Probabilitas Hasil Prediksi (Klasifikasi Penerima Bantuan PKH)')
-    st.write(pred_prob)
+    # st.subheader(
+    #   'Probabilitas Hasil Prediksi (Klasifikasi Penerima Bantuan PKH)')
+    # st.write(pred_prob)
 
 
 run()
