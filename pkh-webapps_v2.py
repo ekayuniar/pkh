@@ -7,7 +7,7 @@ from sklearn.naive_bayes import GaussianNB
 
 st.write("""
 # Klasifikasi Penerima Bantuan PKH (Web Apps)
-Aplikasi berbasi Web untuk memprediski (mengklasifikasi) penerima bantuan PKH bagi masyarakat Desa Jombok \n
+Aplikasi berbasi Web untuk memprediski (mengklasifikasi) penerima bantuan PKH bagi masyarakat Desa "FEST" \n
 """)
 
 img = Image.open('gov_sas.jpg')
