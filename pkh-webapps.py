@@ -22,7 +22,7 @@ st.sidebar.write("""1. Usia \n
     Dewasa (26-45 tahun)   = 1 \n\n
     
 2. Jumlah Tanggungan\n
-   <2  = 3 \n
+    <2  = 3 \n
     <= 2 = 2 \n
     > 2  = 1  \n\n
     
