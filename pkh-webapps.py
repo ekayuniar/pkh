@@ -65,7 +65,7 @@ def run():
     fitur = pd.DataFrame(data, index=[0])
     st.write(fitur)
 
-    prediksi = modelnb.predict(fitur)
+    #prediksi = modelnb.predict(fitur)
     pred_prob = modelnb.predict_proba(fitur)
 
    # st.subheader('Keterangan Label Kelas')
@@ -73,8 +73,24 @@ def run():
    # st.write(keterangan)
 
     st.subheader('Hasil Prediksi (Klasifikasi Penerima Bantuan PKH)')
-    keterangan = np.array(0)
-    st.write(prediksi[keterangan])
+    if st.button("Submit"):
+        fitur = pd.DataFrame(data, index=[0])
+        print(fitur)
+        prediction = modelnb.predict(fitur)
+        lc = [str(i) for i in prediction]
+        ans = int("".join(lc))
+        keterangan = np.array(0)
+        labels2 = (prediction[keterangan])
+        if ans == 0:
+            st.error(
+                labels2
+            )
+        else:
+            st.success(
+                labels2
+            )
+    #keterangan = np.array(0)
+    # st.write(prediksi[keterangan])
 
     # st.subheader(
     #   'Probabilitas Hasil Prediksi (Klasifikasi Penerima Bantuan PKH)')
