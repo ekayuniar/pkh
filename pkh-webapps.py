@@ -69,7 +69,7 @@ def run():
     pred_prob = modelnb.predict_proba(fitur)
 
    # st.subheader('Keterangan Label Kelas')
-   # keterangan = np.array(['LAYAK', 'TIDAK LAYAK'])
+
    # st.write(keterangan)
 
     st.subheader('Hasil Prediksi (Klasifikasi Penerima Bantuan PKH)')
@@ -77,11 +77,11 @@ def run():
         fitur = pd.DataFrame(data, index=[0])
         print(fitur)
         prediction = modelnb.predict(fitur)
+        keterangan = np.array(['LAYAK', 'TIDAK LAYAK'])
         lc = [str(i) for i in prediction]
-        ans = int("".join(lc))
         keterangan = np.array(0)
         labels2 = (prediction[keterangan])
-        if ans == 0:
+        if keterangan == 0:
             st.error(
                 labels2
             )
